@@ -17,7 +17,7 @@ def grayscale(image):
 			r,g,b = pix[i,j]
 			newPixel = (r + g + b) / 3
 			pix[i,j]= (newPixel, newPixel, newPixel)
-	newima.save("gris.jpg")
+	newima.save("gris.png")
 
 def main():
 	grayscale(imagen)
