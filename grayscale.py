@@ -4,22 +4,22 @@ import	Tkinter
 import	sys
 
 
-#python grayscale.py image.jpg
+#python grayscale.py nombredetuimagen.jpg
 
-picture = sys.argv[1]
+imagen = sys.argv[1]
 
 def grayscale(image):
-	newpic=Image.open(image).convert('RGB')
-	pix=newpic.load()
-	w,h = newpic.size
+	newima=Image.open(image).convert('RGB')
+	pix=newima.load()
+	w,h = newima.size
 	for i in range(w):
 		for j in range(h):
 			r,g,b = pix[i,j]
 			newPixel = (r + g + b) / 3
 			pix[i,j]= (newPixel, newPixel, newPixel)
-	newpic.save("gray.jpg")
+	newima.save("gris.jpg")
 
 def main():
-	grayscale(picture)
+	grayscale(imagen)
 
 main()
